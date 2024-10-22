@@ -35,4 +35,19 @@ class MainActivityRobot(private val composeTestRule: ComposeTestRule) {
             .onNodeWithText(entryText)
             .assertIsDisplayed()
     }
+    fun verifyTitleIsDisplayed(title: String) {
+        // Código para verificar se o título da tela é exibido
+        // Pode usar uma função como `assertTrue` para validar a visibilidade do título
+    }
+        // funcão adicionada para validar se estamos na aba certa
+    fun verifyOnEarningsTab() {
+        // Verifica se o título "Earnings" ou outro identificador exclusivo da aba está visível
+        composeTestRule.onNodeWithText("Earnings").assertIsDisplayed()
+    }
+         // funcão adicionada para validar se estamos na aba certa
+    fun verifyOnWalletTab() {
+        // Verifica se o título "Wallet" ou outro identificador exclusivo da aba está visível
+        composeTestRule.onNodeWithText("Wallet").assertIsDisplayed()
+    }
+
 }
